@@ -1,0 +1,92 @@
+@import "../shared/helper";
+
+.home{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    > header{
+        height: px(98);
+        background-size: cover;  // 使图片全部显示
+    }
+    > main{
+        flex: 1;  
+        display: grid;  //表格布局
+        padding-top: px(30);
+        grid-template:
+        "box1 box2 box4 box5" 755fr  // px()用fr代替
+        "box3 box3 box4 box5" 363fr / 366fr 361fr 811fr 747fr;  // 设置上下两部分表格的高度
+        grid-column-gap: px(28);  // 设置间隙
+        grid-row-gap: px(28);
+        > section{
+            text-align: center;  // 给父元素section设置,会使子元素h2居中对齐
+        }
+        .bordered{
+            border: 1px solid #0764bc;
+            border-radius: 4px;
+            position: relative;
+            background: #0c1139;
+            // 蓝色边框里面再放一个边框
+            &::before{
+                content:'';
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 0;
+                border: 0;
+                border-radius: 4px;
+                //border: 1px solid red;
+                box-shadow: 
+                21px 0 0 -20px #0f3361,
+                -21px 0 0 -20px #0f3361,
+                0 21px 0 -20px #0f3361,
+                0 -21px 0 -20px #0f3361,
+                11px 0 0 -10px #0d4483,
+                -11px 0 0 -10px #0d4483,
+                0 11px 0 -10px #0d4483,
+                0 -11px 0 -10px #0d4483;
+            }
+        }
+        > .section1{
+            grid-area: box1;
+            // background: pink;
+        }
+        > .section2{
+            grid-area: box2;
+            // background: lightgrey;
+        }
+        > .section3{
+            grid-area: box3;
+            // background: light#0d4483;
+        }
+        > .section4{
+            grid-area: box4;
+            // background: lightsteel#0d4483;
+        }
+        > .section5{
+            grid-area: box5;
+            // background: lightyellow;
+        }
+        .管辖统计{
+            height: px(315);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h2{
+                flex-shrink: 0;
+                border: 1px solid #0a5299;
+                border-bottom-left-radius: 4px;
+                border-bottom-right-radius: 4px;
+                font-size: px(22);
+                line-height: px(22);
+                padding: px(10) px(28);
+                text-shadow: 0 0 px(3) white;
+            }
+            .chart{
+                flex: 1;
+                width: 100%;
+            }
+        }
+    }
+}
