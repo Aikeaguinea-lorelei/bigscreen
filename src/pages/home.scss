@@ -72,7 +72,7 @@
                     -moz-border-radius: 50%;
                     -ms-border-radius: 50%;
                     -o-border-radius: 50%;
-}
+    }
             }
         }
         > .section1{
@@ -137,6 +137,49 @@
                 }
               }
         }
+        .年龄段 {
+            margin-top: px(23);
+            height: px(389);
+            .年龄元素{
+                flex-direction: row;
+                > .charts {
+                  width: 100%;
+                  flex: 1; 
+                  padding: px(30);
+                }
+            }
+            &-图1, &-图2, &-图3 {
+                flex: 1;
+                display: inline-block;
+                border: 1px red solid;
+                height: px(330);
+                width: px(270);
+            }
+            &-图1, &-图2 {
+                .legend {
+                    height: px(50); 
+                    display: flex; 
+                    align-items: center;
+                    justify-content: center;
+                }
+                .chart {
+                  position: relative;
+                  display: flex;
+                  height: 100%;
+                  > .main {flex: 1;}
+                  > .text {
+                    position: absolute;
+                    top: 34%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    color: #33a4fa;
+                    font-size: px(40);
+                    text-shadow: 0 0 px(20) #33a4fa;
+                    font-weight: bold;
+                    }
+                }
+            }
+        }        
         .chart2{
             margin-top: px(20);
             height: px(478);
@@ -154,10 +197,6 @@
         .chart6{
             height:px(820);
             background: #00020b;
-        }
-        .chart7{
-            margin-top: px(28);
-            height: px(389);
         }
     }
 }

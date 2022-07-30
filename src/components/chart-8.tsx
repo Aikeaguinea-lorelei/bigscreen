@@ -2,8 +2,9 @@ import React, {useEffect, useRef} from 'react';
 import * as echarts from 'echarts';
 import {px} from '../shared/px';
 
-export const Chart7 = () => {
+export const Chart8 = () => {
   const divRef = useRef(null);
+  const colors = ['#856BED', '#F46064', '#F38E1C', '#1CDB7C', '#33A4FA'];
   useEffect(() => {
     var myChart = echarts.init(divRef.current);
     myChart.setOption(({
@@ -56,19 +57,21 @@ export const Chart7 = () => {
             show: false
           },
           data: [
-            { value: 0.2, name: '女' },
-            { value: 0.8, name: '男' },
-          ]
+            {value: 0.07, name: '10-20'},
+            {value: 0.10, name: '20-30'},
+            {value: 0.23, name: '30-40'},
+            {value: 0.28, name: '40-50'},
+            {value: 0.32, name: '50-60'},          ]
         }
       ]
     }));
   }, []);
 
   return (
-    <div className="年龄段-图1">
+    <div className="年龄段-图2">
       <div className="chart">
-        <div className="main" ref={divRef} style={{height:'100px'}}/>
-        <div className="text">性别</div>
+        <div className="main" ref={divRef}/>
+        <div className="text">年龄段</div>
       </div>
     </div>
   );
