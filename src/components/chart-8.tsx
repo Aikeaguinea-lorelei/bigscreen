@@ -4,7 +4,6 @@ import {px} from '../shared/px';
 
 export const Chart8 = () => {
   const divRef = useRef(null);
-  const colors = ['#856BED', '#F46064', '#F38E1C', '#1CDB7C', '#33A4FA'];
   useEffect(() => {
     var myChart = echarts.init(divRef.current);
     myChart.setOption(({
@@ -16,11 +15,12 @@ export const Chart8 = () => {
         top: '70%',
         left: 'center',
         textStyle: {
-          fontSize: px(20),
+          fontSize: px(15),
           color: "#c4c4c4",
         },
-        itemWidth: px(30),
-        itemHeight: px(15)
+        itemWidth: px(20),
+        itemHeight: px(10),
+        itemGap:px(5)
       },
       series: [
         {
@@ -29,8 +29,7 @@ export const Chart8 = () => {
             normal: {
               color: function (colors) {
                  var colorList = [
-                  '#33a4fa',
-                  '#8d70f8'
+                  '#856BED', '#F46064', '#F38E1C', '#1CDB7C', '#33A4FA'
                  ];
                  return colorList[colors.dataIndex];
                }
@@ -61,7 +60,8 @@ export const Chart8 = () => {
             {value: 0.10, name: '20-30'},
             {value: 0.23, name: '30-40'},
             {value: 0.28, name: '40-50'},
-            {value: 0.32, name: '50-60'},          ]
+            {value: 0.32, name: '50-60'},          
+          ]
         }
       ]
     }));
@@ -70,7 +70,7 @@ export const Chart8 = () => {
   return (
     <div className="年龄段-图2">
       <div className="chart">
-        <div className="main" ref={divRef}/>
+        <div className="main" ref={divRef} style={{height:'100px'}}/>
         <div className="text">年龄段</div>
       </div>
     </div>

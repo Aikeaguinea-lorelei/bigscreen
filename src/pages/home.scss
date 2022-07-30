@@ -66,36 +66,12 @@
                 > .icon{
                     height: px(1);
                     width: px(10);
-                    border: 1px red solid;
+                    // border: 1px red solid;
                     border-radius: 50%;
-                    -webkit-border-radius: 50%;
-                    -moz-border-radius: 50%;
-                    -ms-border-radius: 50%;
-                    -o-border-radius: 50%;
-    }
+                }
             }
         }
-        > .section1{
-            grid-area: box1;
-            // background: pink;
-        }
-        > .section2{
-            grid-area: box2;
-            // background: lightgrey;
-        }
-        > .section3{
-            grid-area: box3;
-            // background: light#0d4483;
-        }
-        > .section4{
-            grid-area: box4;
-            // background: lightsteel#0d4483;
-        }
-        > .section5{
-            grid-area: box5;
-            // background: lightyellow;
-        }
-        .管辖统计,.发案趋势,.案发时段,.战果对比,.籍贯,.年龄段{
+        .管辖统计,.发案趋势,.案发时段,.战果对比,.籍贯,.年龄段,.作案手段,.案发类型,.案发街道{
             height: px(315);
             display: flex;
             flex-direction: column;
@@ -115,9 +91,9 @@
                 width: 100%;
             }
         }
-        .战果对比{
+        .战果对比,.作案手段{
             > table {
-                font-size: px(30);
+                font-size: px(5);
                 margin-top: px(40);
                 border-collapse: collapse;
                 th, td {
@@ -131,16 +107,32 @@
                   }
                 }
                 tbody {
-                  td {height: px(20); width: px(84);
+                  td {
+                    font-size: px(15);
+                    height: px(16); 
+                    width: px(84);
                     background: #1c2456;
                   }
                 }
-              }
+            }
         }
-        .年龄段 {
-            margin-top: px(23);
-            height: px(389);
-            .年龄元素{
+        .作案手段{
+            height: px(450);
+            margin-top: px(20);
+            > table {
+                margin-top: px(20);
+                tbody {
+                  td {
+                    font-size: px(1);
+                    height:px(8); 
+                    width: px(184);
+                  }
+                }
+            }
+        }
+        .案发类型{
+            height: px(373);
+            .类型元素{
                 flex-direction: row;
                 > .charts {
                   width: 100%;
@@ -148,14 +140,12 @@
                   padding: px(30);
                 }
             }
-            &-图1, &-图2, &-图3 {
+            &-图1, &-图2{
                 flex: 1;
                 display: inline-block;
-                border: 1px red solid;
-                height: px(330);
-                width: px(270);
-            }
-            &-图1, &-图2 {
+                // border: 1px red solid;
+                height: px(310);
+                width: px(370);
                 .legend {
                     height: px(50); 
                     display: flex; 
@@ -179,7 +169,126 @@
                     }
                 }
             }
-        }        
+        }
+        .案发街道 {
+            margin-top: px(20);
+            height: px(373);
+            .街道元素{
+                flex-direction: row;
+                > .charts {
+                  width: 100%;
+                  flex: 1; 
+                  padding: px(30);
+                }
+            }
+            &-图1, &-图2{
+                flex: 1;
+                display: inline-block;
+                // border: 1px red solid;
+                height: px(315);
+                width: px(370);
+                .legend {
+                    height: px(50); 
+                    display: flex; 
+                    align-items: center;
+                    justify-content: center;
+                }
+                .chart {
+                  position: relative;
+                  display: flex;
+                  height: 100%;
+                  > .main {flex: 1;}
+                  > .text {
+                    position: absolute;
+                    top: 34%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    color: #33a4fa;
+                    font-size: px(40);
+                    text-shadow: 0 0 px(20) #33a4fa;
+                    font-weight: bold;
+                    }
+                }
+            }
+        }
+        .年龄段 {
+            margin-top: px(23);
+            height: px(389);
+            .年龄元素{
+                flex-direction: row;
+                > .charts {
+                  width: 100%;
+                  flex: 1; 
+                  padding: px(30);
+                }
+            }
+            &-图1, &-图2, &-图3 {
+                flex: 1;
+                display: inline-block;
+                // border: 1px red solid;
+                height: px(330);
+                width: px(270);
+                .legend {
+                    height: px(50); 
+                    display: flex; 
+                    align-items: center;
+                    justify-content: center;
+                }
+                h3{
+                    font-size: px(20);
+                    color: #7ab6db; ;
+                }
+                .chart {
+                  position: relative;
+                  display: flex;
+                  height: 100%;
+                  > .main {flex: 1;}
+                  > .text {
+                    position: absolute;
+                    top: 34%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    color: #33a4fa;
+                    font-size: px(40);
+                    text-shadow: 0 0 px(20) #33a4fa;
+                    font-weight: bold;
+                    }
+                }
+            }
+            &-图3{
+                border: #08397d 1px solid;
+            }
+        }
+        .籍贯{
+            .wrapper{
+                font-size: px(1);
+                .note{
+                    text-align: right;
+                    font-size: px(2);
+                    color: #c4c4c4;
+                }
+            }
+        }
+        > .section1{
+            grid-area: box1;
+            // background: pink;
+        }
+        > .section2{
+            grid-area: box2;
+            // background: lightgrey;
+        }
+        > .section3{
+            grid-area: box3;
+            // background: light#0d4483;
+        }
+        > .section4{
+            grid-area: box4;
+            // background: lightsteel#0d4483;
+        }
+        > .section5{
+            grid-area: box5;
+            // background: lightyellow;
+        }     
         .chart2{
             margin-top: px(20);
             height: px(478);
