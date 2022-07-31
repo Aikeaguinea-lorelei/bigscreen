@@ -35,7 +35,7 @@ export const Home = () => {
         <section className='section4'>
           <Chart6/>
           <div className='bordered 年龄段'>
-            <h2>犯罪人员年龄段分布</h2>
+            <h2>人员年龄段分布</h2>
             <div className='年龄元素'>
               <Chart7/>
               <Chart8/>

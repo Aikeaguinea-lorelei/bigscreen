@@ -12,7 +12,7 @@ export const Chart7 = () => {
       },
       legend: {
         // 位置
-        top: '70%',
+        top: '85%',
         left: 'center',
         textStyle: {
           fontSize: px(20),
@@ -32,14 +32,16 @@ export const Chart7 = () => {
                   '#8d70f8'
                  ];
                  return colorList[colors.dataIndex];
-               }
-             },
-           },
+              },
+              "borderWidth": px(3), // 板块间间距的宽度
+              "borderColor": '#0c1139', //背景色
+            },
+          },
           name: 'Access From',
           type: 'pie',
           // 内外圈半径
-          radius: ['75%', '90%'],
-          center: ['50%', '35%'],
+          radius: ['70%', '85%'],
+          center: ['50%', '40%'],
           avoidLabelOverlap: false,
           label: {
             show: false,
@@ -67,7 +69,7 @@ export const Chart7 = () => {
   return (
     <div className="年龄段-图1">
       <div className="chart">
-        <div className="main" ref={divRef} style={{height:'100px'}}/>
+        <div className="main" ref={divRef} style={{height:'100%'}}/>
         <div className="text">性别</div>
       </div>
     </div>

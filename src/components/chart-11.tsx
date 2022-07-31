@@ -23,9 +23,12 @@ export const Chart11 = () => {
         {
           startAngle: -20,
           type: 'pie',
-          radius: ['25%', '60%'],
+          radius: ['15%', '50%'],
           center: ['50%', '45%'],
-          labelLine: {show: true, length: 3},
+          label: {
+            color: '#fff'
+          },
+          labelLine: {show: true, length: 2},
           roseType: 'area',
           itemStyle: {
             shadowBlur: px(200),

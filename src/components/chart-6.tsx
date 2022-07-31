@@ -10,7 +10,22 @@ export const Chart6 = () => {
     var myChart = echarts.init(divRef.current);
     // @ts-ignore
     echarts.registerMap('CN', china);
-    myChart.setOption(({
+    myChart.setOption({
+
+      textStyle: {
+        fontSize: px(12),
+        color: '#79839E'
+      },
+      title: { show: false },
+      legend: { show: false },
+      grid: {
+        x: px(20),
+        y: px(20),
+        x2: px(20),
+        y2: px(20),
+        containLabel: true
+      },
+
       xAxis: {show: false},
       yAxis: {show: false},
       series: [
@@ -64,14 +79,14 @@ export const Chart6 = () => {
           }
         },
       ]
-    }));
+    });
   }, []);
 
   return (
     <div className="bordered 籍贯 chart6">
       <h2>全市犯罪人员籍贯分布地</h2>
       <div className="wrapper">
-        <div ref={divRef} className="chart" style={{width: '200px', height:'200px'}}/>
+        <div ref={divRef} className="chart" style={{width: '400px', height:'400px'}}/>
         <div className="legend bordered">
           <span className="icon" style={{background: colors['甘肃省']}}/>甘肃籍
           <span className="icon" style={{background: colors['四川省']}}/>四川籍

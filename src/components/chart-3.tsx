@@ -9,18 +9,18 @@ export const Chart3 = () => {
     myChart.setOption(({
       legend: {
         height:px(20),
-        bottom: px(-10),
+        bottom: px(10),
         textStyle: {
-            fontSize: 4,
+            fontSize: 8,
             color: "#c4c4c4",
         },
-        itemWidth: px(30),
+        itemWidth: px(40),
         itemHeight: px(15)
       },
       xAxis: {
         type: 'category',
         boundaryGap: false,
-        data: [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
+        data: [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022],
         splitLine: {show: true, lineStyle: {color: '#073E78'}},
         axisTick: {show: false},
         axisLine: {show: false},
