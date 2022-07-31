@@ -77,7 +77,7 @@ export const Chart6 = () => {
           <span className="icon" style={{background: colors['四川省']}}/>四川籍
           <span className="icon" style={{background: colors['青海省']}}/>青海籍
         </div>
-        <div className='note'>此地图仅显示了中国的部分区域</div>
+        <div className='notes'>此地图仅显示了中国的部分区域</div>
       </div>
     </div>
   );

@@ -260,13 +260,39 @@
             }
         }
         .籍贯{
-            .wrapper{
-                font-size: px(1);
-                .note{
-                    text-align: right;
-                    font-size: px(2);
-                    color: #c4c4c4;
+            height: px(753); background: transparent;
+            > .wrapper {
+              position: relative;
+              width: 100%;
+              flex: 1;
+              display: flex; 
+              flex-direction: column;
+              .chart {flex: 1;}
+              .legend {
+                width: px(330);
+                position: absolute;
+                top: px(40);
+                left: px(20);
+                display: flex;
+                align-items: center;
+                font-size: px(22); 
+                padding: px(20) px(10) px(20) 0;
+                border-radius: 0;
+                .icon {
+                  margin: 0 px(10);
+                  display: inline-block;
+                  width: px(16);
+                  height: px(16);
+                  border-radius: 50%;
+                  background: #1cecd9;
                 }
+              }
+              .notes{
+                position: absolute;
+                bottom: px(0);
+                right: px(5);
+                font-size: px(5);
+              }
             }
         }
         > .section1{
